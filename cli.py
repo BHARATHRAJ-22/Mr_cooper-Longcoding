@@ -79,7 +79,7 @@ def short_id(uid):
 bank    = QuestionBank()
 service = ExamService(bank)
 
-# Registry for display  (id -> label)
+
 _exams    = {}   # exam_id    -> title
 _students = {}   # student_id -> "Name (RollNo)"
 _attempts = {}   # attempt_id -> "StudentName @ ExamTitle"
@@ -319,7 +319,6 @@ def menu_publish_exam():
     pause()
 
 
-# ─────────────────────── Student Panel ───────────────────────────────────────
 
 def menu_start_exam():
     header("START EXAM")
@@ -686,7 +685,7 @@ def menu_system_summary():
     pause()
 
 
-# ─────────────────────── Sub-menus ───────────────────────────────────────────
+
 
 def admin_menu():
     while True:
@@ -779,7 +778,7 @@ def reports_menu():
         elif ch == 0: break
 
 
-# ─────────────────────── Main Menu ───────────────────────────────────────────
+
 
 def main():
     while True:
