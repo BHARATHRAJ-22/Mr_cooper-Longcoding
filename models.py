@@ -128,7 +128,7 @@ class QuestionBank:
         return f"<QuestionBank questions={len(self._questions)}>"
 
 
-# ─────────────────────────── Student ─────────────────────────────────────────
+
 
 @dataclass
 class Student:
@@ -148,7 +148,6 @@ class Student:
         return f"<Student {self.roll_no} – {self.name}>"
 
 
-# ─────────────────────────── Exam ────────────────────────────────────────────
 
 @dataclass
 class Exam:
@@ -164,7 +163,6 @@ class Exam:
     question_ids: list[str] = field(default_factory=list)
     enrolled_student_ids: list[str] = field(default_factory=list)
 
-    # ── Lifecycle ──────────────────────────────────────────────────────────
     def publish(self) -> None:
         if not self.question_ids:
             raise RuntimeError("Cannot publish exam with no questions.")
@@ -200,7 +198,6 @@ class Exam:
         return f"<Exam {self.title!r} [{self.status.value}]>"
 
 
-# ─────────────────────────── Answer ──────────────────────────────────────────
 
 @dataclass
 class Answer:
