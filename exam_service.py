@@ -296,7 +296,7 @@ class ExamService:
             raise TimerExpiredError("Time is up. Your exam has been auto-submitted.")
 
 
-# ─────────────────────────── Custom Exceptions ───────────────────────────────
+
 
 class ExamWindowError(Exception):
     """Raised when a student tries to start/access an exam outside its window."""
